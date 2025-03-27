@@ -9,24 +9,24 @@ export const calculateMaterials = (specs) => {
   const {
     length,
     picketOrientation,
-    fenceType,
+    // fenceType,  // Currently unused but kept for future use
     fenceHeight,
     numberOfPulls,
     numberOfCorners,
     picketWidth,
-    picketType,
+    // picketType,  // Currently unused but kept for future use
     postSpacing,
     numberOfRails,
-    postType,
+    // postType,  // Currently unused but kept for future use
     flangedPostsCentered,
     flangedPostsOffCentered,
     holeDepth,
     holeWidth,
-    concreteType,
+    // concreteType,  // Currently unused but kept for future use
     baseboard,
     capType,
-    trimType,
-    woodType,
+    // trimType,  // Currently unused but kept for future use
+    // woodType,  // Currently unused but kept for future use
     singleGates,
     doubleGates,
     slidingGates,

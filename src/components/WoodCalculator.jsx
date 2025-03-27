@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 // Import data and utilities
 import { 
-  materialItems, 
   defaultSpecs, 
   defaultCustomerInfo, 
   defaultCustomItems, 
@@ -35,7 +34,6 @@ const WoodCalculator = () => {
   const [quantities, setQuantities] = useState({});
   const [costs, setCosts] = useState({ itemCosts: {}, totalCost: 0 });
   const [taxRate, setTaxRate] = useState(8.25);
-  const [formulas, setFormulas] = useState(null);
   
   // Calculate materials when specs change or calculate button is clicked
   useEffect(() => {
@@ -186,9 +184,8 @@ const WoodCalculator = () => {
   };
 
   const handleFormulaSave = (formulaData) => {
-    setFormulas(formulaData);
+    localStorage.setItem('woodCalculatorFormulas', JSON.stringify(formulaData));
     console.log('Formulas saved:', formulaData);
-    // You can add additional logic here if needed
   };
   
   return (
